@@ -1,0 +1,17 @@
+.contenedor {
+  position: relative;
+  width: 500px;
+}
+
+.contenedor img {
+  width: 100%;
+  display: block;
+}
+
+.texto {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
