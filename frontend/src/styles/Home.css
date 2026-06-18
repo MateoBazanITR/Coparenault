@@ -1,17 +1,104 @@
-.contenedor {
-  position: relative;
-  width: 500px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.contenedor img {
-  width: 100%;
-  display: block;
-}
-
-.texto {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  text-align: center;
+.home {
+  background: #111;
   color: white;
+  min-height: 100vh;
+}
+
+/* HERO */
+
+.hero {
+  height: 60vh;
+   background-image: url("../assets/trofeo.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.35);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.overlay h1 {
+  font-size: 4rem;
+  color: #ffd233;
+}
+
+.overlay p {
+  font-size: 1.5rem;
+}
+
+.overlay button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #333;
+}
+
+/* TESTIMONIOS */
+
+.testimonios {
+  padding: 60px;
+}
+
+.testimonios h2 {
+  margin-bottom: 30px;
+  color: #777;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  border: 1px solid #555;
+  border-radius: 10px;
+  padding: 20px;
+  background: #181818;
+}
+
+.card h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.persona {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.persona img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.persona p {
+  font-weight: bold;
+}
+
+.persona span {
+  color: #aaa;
+  font-size: 0.9rem;
 }

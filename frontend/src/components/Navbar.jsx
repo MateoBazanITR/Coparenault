@@ -11,7 +11,7 @@ function Navbar() {
         <Link to="/">Inicio</Link>
         <Link to="/Fixture">Fixture</Link>
         <Link to="/Horario">Horarios</Link>
-        <Link to="/Anotarse">Anotarse</Link>
+        <Link to="/Anota">Anota</Link>
         <Link to="/Cantina">Cantina</Link>
         <Link to="/Iniciarsesion">Login</Link>
         <Link to="/Registrarse">Registro</Link>
