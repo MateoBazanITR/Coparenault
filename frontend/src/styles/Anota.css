@@ -6,6 +6,15 @@
   flex-direction: column;
   align-items: center;
 
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("../assets/anota.png");
+  background-size: cover;
+  background-position: default;
+
   padding-top: 60px;
 }
 

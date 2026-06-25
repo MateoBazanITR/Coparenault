@@ -35,10 +35,14 @@ function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="overlay">
-          <h1>Copa Renault</h1>
+          <h1>COPA RENAULT </h1>
           <p>Una verdadera fiesta del deporte intercolegial</p>
 
-          <button>Contactate con nosotros</button>
+          <button>
+            ¿Quieres ayudar?
+          <br />
+          <span>Contactate con nosotros</span>
+          </button>
         </div>
       </section>
 

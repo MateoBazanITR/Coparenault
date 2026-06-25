@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import "../styles/Iniciarsesion.css";
 
 function Iniciarsesion() {
   const [email, setEmail] = useState("");
@@ -25,34 +26,40 @@ function Iniciarsesion() {
         icon: "success",
         title: "¡Bienvenido!",
         text: "Inicio de sesión exitoso",
-        confirmButtonText: "Continuar",
-      }).then(() => {
-        navigate("/home");
       });
 
       console.log(respuesta.data);
 
+      setEmail("");
+      setPassword("");
+
+      navigate("/home");
+
     } catch (error) {
+      console.error(error);
+
       Swal.fire({
         icon: "error",
         title: "Error",
         text: "Correo o contraseña incorrectos",
       });
-
-      console.error(error);
     }
   };
 
   return (
-    <div>
-      <h1>Iniciar Sesión</h1>
+    <div className="iniciarsesion-page">
+      <h1>INICIAR SESIÓN</h1>
 
-      <form className="form" onSubmit={handleLogin}>
+      <form
+        className="iniciarsesion-form"
+        onSubmit={handleLogin}
+      >
         <input
           type="email"
-          placeholder="Correo"
+          placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
 
         <input
@@ -60,10 +67,20 @@ function Iniciarsesion() {
           placeholder="Contraseña"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
 
-        <button type="submit">Ingresar</button>
+        <button type="submit">
+          Confirmar
+        </button>
       </form>
+
+      <div className="registro-link">
+        ¿No tienes cuenta?{" "}
+        <a href="/Registrarse">
+          Regístrate
+        </a>
+      </div>
     </div>
   );
 }

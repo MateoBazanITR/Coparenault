@@ -44,13 +44,13 @@ body {
 
 .navbar-links a {
   color: white !important;
-  text-decoration: none;
+  text-decoration: bold;
   font-size: 18px;
   transition: 0.3s;
 }
 
 .navbar-links a:hover {
-  color: #00bfff !important;
+  color: #d4aa2a !important;
 }
 
 /* HOME */

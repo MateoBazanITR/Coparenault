@@ -7,4 +7,5 @@
 body {
   background-color: #020f2b;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal !important;
 }

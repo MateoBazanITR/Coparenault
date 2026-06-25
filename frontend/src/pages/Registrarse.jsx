@@ -4,6 +4,7 @@ import "../styles/Registrarse.css";
 
 function Registrarse() {
   const [nombre, setNombre] = useState("");
+  const [apellido, setApellido] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -20,6 +21,7 @@ function Registrarse() {
           },
           body: JSON.stringify({
             nombre,
+            apellido,
             email,
             password,
           }),
@@ -28,6 +30,10 @@ function Registrarse() {
 
       const data = await response.json();
 
+      if (!response.ok) {
+        throw new Error(data.mensaje);
+      }
+
       Swal.fire({
         icon: "success",
         title: "Registro exitoso",
@@ -35,22 +41,21 @@ function Registrarse() {
       });
 
       setNombre("");
+      setApellido("");
       setEmail("");
       setPassword("");
     } catch (error) {
-      console.error(error);
-
       Swal.fire({
         icon: "error",
         title: "Error",
-        text: "No se pudo registrar el usuario",
+        text: error.message,
       });
     }
   };
 
   return (
     <div className="registro-page">
-      <h1>Crear Cuenta</h1>
+      <h1>CREAR CUENTA</h1>
 
       <form className="registro-form" onSubmit={handleSubmit}>
         <input
@@ -62,8 +67,16 @@ function Registrarse() {
         />
 
         <input
+          type="text"
+          placeholder="Apellido"
+          value={apellido}
+          onChange={(e) => setApellido(e.target.value)}
+          required
+        />
+
+        <input
           type="email"
-          placeholder="Gmail"
+          placeholder="Correo electrónico"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -81,6 +94,13 @@ function Registrarse() {
           Registrarse
         </button>
       </form>
+
+      <div className="login-link">
+        ¿Tenés una cuenta ya?{" "}
+        <a href="/Iniciarsesion">
+          Inicia sesión
+        </a>
+      </div>
     </div>
   );
 }

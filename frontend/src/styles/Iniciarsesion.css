@@ -1,4 +1,4 @@
-.registro-page {
+.iniciarsesion-page {
   min-height: 100vh;
   background: #1a1a1a;
 
@@ -11,7 +11,7 @@
       rgba(0, 0, 0, 0.45),
       rgba(0, 0, 0, 0.45)
     ),
-    url("../assets/registroo.png");
+    url("../assets/Iniciarsesion.png");
 
   background-size: cover;
   background-position: center;
@@ -19,52 +19,56 @@
   padding-top: 80px;
 }
 
-.registro-page h1 {
+.iniciarsesion-page h1 {
   color: #d4aa2a;
-  margin-bottom: 40px;
 
-  color: #d4aa2a !important;
+  font-size: 80px;
+  font-weight: bold;
 
   font-size: 3rem;
   font-weight: 800;
-
-  font-family: inherit;
+  margin-bottom: 40px;
 
   text-shadow:
-    4px 4px 8px rgba(0, 0, 0, 0.8);
-
+    4px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
-.registro-form {
+.iniciarsesion-form {
   width: 400px;
 
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
-.registro-form input {
+.iniciarsesion-form input {
   padding: 15px;
+
   border: none;
   border-radius: 30px;
+
   font-size: 16px;
 }
 
-.registro-form button {
-  padding: 15px;
+.iniciarsesion-form button {
+  width: 120px;
+
+  margin: auto;
+
+  padding: 12px;
+
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
+
   background: #d4aa2a;
+
   font-size: 16px;
   font-weight: bold;
+
   cursor: pointer;
 }
 
-button:hover {
-  background: rgba(212, 170, 42, 0.15);
-}
-
-.registro-link {
+.login-link {
   margin-top: 20px;
 
   background: rgba(0, 0, 0, 0.8);
@@ -76,12 +80,12 @@ button:hover {
   color: white;
 }
 
-.registro-link a {
+.login-link a {
   color: #0099ff !important;
-  font-weight: 400 !important;
   text-decoration: none;
+  font-weight: 400 !important;
 }
 
-.registro-link a:hover {
+.login-link a:hover {
   text-decoration: underline;
 }

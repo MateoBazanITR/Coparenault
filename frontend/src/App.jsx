@@ -7,7 +7,6 @@ import Anota from "./pages/Anota";
 import Cantina from "./pages/Cantina";
 import Compra from "./pages/Compra";
 import Fixture from "./pages/Fixture";
-import Horario from "./pages/Horario";
 import Iniciarsesion from "./pages/Iniciarsesion";
 import Registrarse from "./pages/Registrarse";
 
@@ -31,7 +30,6 @@ function App() {
 
         <Route path="/fixture" element={<Fixture />} />
 
-        <Route path="/horario" element={<Horario />} />
 
         <Route path="/iniciarsesion" element={<Iniciarsesion />} />
 

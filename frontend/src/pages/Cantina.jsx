@@ -54,9 +54,7 @@ function Cantina() {
       <div className="sidebar">
         <h3>Productos</h3>
 
-        <button className="filtro-btn">
-          Lo mas popular!!!
-        </button>
+
 
         <div className="filtro">
           <p>Precio</p>

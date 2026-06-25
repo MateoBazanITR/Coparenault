@@ -108,7 +108,16 @@ function Anota() {
           required
         >
           <option value="">
-            Seleccione un deporte
+            Seleccione un Deporte
+          </option>
+          <option value="">
+            Futbol 
+          </option>
+          <option value="">
+            Basquet 
+          </option>
+          <option value="">
+            Voley
           </option>
 
           {deportes.map((deporte) => (

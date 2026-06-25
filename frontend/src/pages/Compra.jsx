@@ -10,7 +10,7 @@ function Compra() {
 
         <input type="number" placeholder="Cantidad" />
 
-        <button>Comprar</button>
+        <button>Comprar entradas</button>
 
       </form>
 

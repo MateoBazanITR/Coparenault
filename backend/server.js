@@ -66,37 +66,49 @@ app.post("/login", (req, res) => {
     });
   });
 });
-
-
 /* =====================================
-   Registro
+   REGISTRO
 ===================================== */
 
 app.post("/registro", (req, res) => {
-  console.log("DATOS RECIBIDOS:", req.body);
-
-  const { nombre, email, password } = req.body;
+  const { nombre, apellido, email, password } = req.body;
 
   const sql = `
-    INSERT INTO usuarios
-    (nombre, email, password_hash)
-    VALUES (?, ?, ?)
+    INSERT INTO usuarios (
+      nombre,
+      apellido,
+      email,
+      password_hash,
+      id_rol,
+      fecha_registro
+    )
+    VALUES (?, ?, ?, ?, ?, NOW())
   `;
 
-  db.query(sql, [nombre, email, password], (err, result) => {
-    console.log("ERROR:", err);
-    console.log("RESULT:", result);
+  db.query(
+    sql,
+    [
+      nombre,
+      apellido,
+      email,
+      password,
+      5
+    ],
+    (err, result) => {
+      if (err) {
+        console.error("ERROR SQL:", err);
 
-    if (err) {
-      return res.status(500).json({
-        mensaje: "Error al registrar usuario",
+        return res.status(500).json({
+  mensaje: "Error al registrar usuario",
+});
+      }
+
+      res.json({
+        mensaje: "Usuario registrado correctamente",
+        id: result.insertId,
       });
     }
-
-    res.json({
-      mensaje: "Usuario registrado correctamente",
-    });
-  });
+  );
 });
 /* =====================================
    DEPORTES
